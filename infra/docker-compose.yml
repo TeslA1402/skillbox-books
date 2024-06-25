@@ -1,0 +1,14 @@
+version: '3'
+services:
+  postgres-skillbox-books:
+    image: postgres:16.2
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=local_user
+      - POSTGRES_PASSWORD=local_password
+      - POSTGRES_DB=books
+  redis-skillbox-books:
+    image: redis:7.2.5-alpine
+    ports:
+      - '6379:6379'
